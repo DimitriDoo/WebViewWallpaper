@@ -77,13 +77,12 @@ namespace WebViewWindow
 
         private void PlaceWindow()
         {
-            // Ensure the window is displayed without a background
             this.WindowState = WindowState.Maximized;
             this.Left = 0;
             this.Top = 0;
             this.Width = SystemParameters.PrimaryScreenWidth;
             this.Height = SystemParameters.PrimaryScreenHeight;
-            this.Topmost = false;  // Ensure the window stays on top of all other windows
+            this.Topmost = false;
             this.WindowStyle = WindowStyle.None;
             this.ShowInTaskbar = true;
         }
