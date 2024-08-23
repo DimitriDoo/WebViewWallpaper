@@ -3,7 +3,12 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.10.35201.131
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebViewWallpaper", "WebViewWindow\WebViewWallpaper.csproj", "{17EACEF7-CB6C-4BB6-B06B-1564A4C9DE12}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WebViewWallpaper", "WebViewWindow\WebViewWallpaper.csproj", "{17EACEF7-CB6C-4BB6-B06B-1564A4C9DE12}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{3D293B25-4C49-4979-9DA3-CF157972F009}"
+	ProjectSection(SolutionItems) = preProject
+		README.md = README.md
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
