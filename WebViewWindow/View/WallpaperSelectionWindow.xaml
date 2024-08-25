@@ -1,0 +1,18 @@
+﻿<Window x:Class="WebViewWallpaper.WallpaperSelectionWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WebViewWallpaper" xmlns:viewmodels="clr-namespace:WebViewWallpaper.ViewModels"
+        mc:Ignorable="d"
+        Title="WallpaperSelectionWindow" Height="283" Width="363">
+    <Window.DataContext>
+        <viewmodels:WallpaperDirectoriesViewModel/>
+    </Window.DataContext>
+    <DockPanel>
+        <DataGrid x:Name="WallpaperDirectories" ItemsSource="{Binding WallpaperDirectories}">
+            <DataGrid.Columns>
+            </DataGrid.Columns>
+        </DataGrid>
+    </DockPanel>
+</Window>
