@@ -10,8 +10,9 @@
         <viewmodels:WallpaperDirectoriesViewModel/>
     </Window.DataContext>
     <DockPanel>
-        <DataGrid x:Name="WallpaperDirectories" ItemsSource="{Binding WallpaperDirectories}">
+        <DataGrid x:Name="WallpaperDirectories" ItemsSource="{Binding WallpaperDirectories}" AutoGenerateColumns="False">
             <DataGrid.Columns>
+                <DataGridTextColumn Header="Wallpaper"  Binding="{Binding Path=Wallpaper}" Width="*" />
             </DataGrid.Columns>
         </DataGrid>
     </DockPanel>

@@ -16,7 +16,8 @@ namespace WebViewWallpaper.ViewModels
             List<WallpaperDirectory> dirs = new List<WallpaperDirectory>();
             foreach (string dir in Directory.GetDirectories($@"{AppContext.BaseDirectory}\Wallpapers\"))
             {
-                dirs.Add(new WallpaperDirectory() { Wallpaper = dir });
+                string dirName = dir.Remove(0, $@"{AppContext.BaseDirectory}\Wallpapers\".Length);
+                dirs.Add(new WallpaperDirectory() { Wallpaper = dirName });
             }
             this.WallpaperDirectories = new ObservableCollection<WallpaperDirectory>(dirs);
         }
