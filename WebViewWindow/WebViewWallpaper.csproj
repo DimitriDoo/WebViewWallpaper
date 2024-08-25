@@ -17,6 +17,10 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\WallpaperManager\WallpaperManager.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
     <None Update="Wallpapers\DefaultWallpaper\Wallpaper.html">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
