@@ -2,7 +2,7 @@
 using System.Data;
 using System.Windows;
 
-namespace WebViewWindow
+namespace WebViewWallpaper
 {
     /// <summary>
     /// Interaction logic for App.xaml

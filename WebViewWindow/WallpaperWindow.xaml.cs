@@ -4,7 +4,7 @@ using System.Windows;
 using System.Windows.Interop;
 using WallpaperManager;
 
-namespace WebViewWindow
+namespace WebViewWallpaper
 {
     /// <summary>
     /// Interaction logic for MainWindow.xaml
@@ -14,7 +14,7 @@ namespace WebViewWindow
         public WallpaperWindow()
         {
             InitializeComponent();
-            webView.Source = new Uri($@"{AppContext.BaseDirectory}\Wallpapers\DefaultWallpaper\Wallpaper.html");
+            webView.Source = new Uri($@"{AppContext.BaseDirectory}\Wallpapers\{Properties.Settings.Default.SelectedWallpaper}\Wallpaper.html");
             this.Loaded += MainWindow_Loaded;
             this.Closing += MainWindow_Closing;
             PlaceWindow();
