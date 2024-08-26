@@ -36,6 +36,7 @@ namespace WebViewWallpaper
         {
             _wallpaperWindow.Close();
             Properties.Settings.Default.SelectedWallpaper = _viewModel.WallpaperDirectories[WallpaperDirectories.SelectedIndex].Wallpaper;
+            Properties.Settings.Default.Save();
 
             _wallpaperWindow = new WallpaperWindow();
             _wallpaperWindow.Show();
@@ -44,6 +45,11 @@ namespace WebViewWallpaper
         private void WallpaperSelectionWindow_Loaded(object sender, RoutedEventArgs e)
         {
             _wallpaperWindow.Show();
+        }
+
+        private void WallpaperSelectionWindow_Closing(object sender, System.ComponentModel.CancelEventArgs e)
+        {
+            _wallpaperWindow.Close();
         }
         #endregion
     }
