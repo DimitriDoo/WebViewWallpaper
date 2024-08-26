@@ -14,6 +14,7 @@ using System.Windows.Shapes;
 using System.Data;
 using System.IO;
 using WebViewWallpaper.ViewModels;
+using WebViewWindow;
 
 namespace WebViewWallpaper
 {
@@ -22,9 +23,25 @@ namespace WebViewWallpaper
     /// </summary>
     public partial class WallpaperSelectionWindow : Window
     {
+        private WallpaperWindow wallpaperWindow = new WallpaperWindow();
+
         public WallpaperSelectionWindow()
         {
             InitializeComponent();
         }
+
+        #region"Events"
+        private void WallpaperDirectories_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+
+        }
+
+        //Read Config
+        //Select Wallpaper
+        private void WallpaperSelectionWindow_Loaded(object sender, RoutedEventArgs e)
+        {
+            wallpaperWindow.Show();
+        }
+        #endregion
     }
 }

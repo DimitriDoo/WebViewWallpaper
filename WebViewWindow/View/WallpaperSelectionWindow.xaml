@@ -5,12 +5,13 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:WebViewWallpaper" xmlns:viewmodels="clr-namespace:WebViewWallpaper.ViewModels"
         mc:Ignorable="d"
-        Title="WallpaperSelectionWindow" Height="283" Width="363">
+        Title="WallpaperSelectionWindow" Height="283" Width="363"
+        Loaded="WallpaperSelectionWindow_Loaded">
     <Window.DataContext>
         <viewmodels:WallpaperDirectoriesViewModel/>
     </Window.DataContext>
     <DockPanel>
-        <DataGrid x:Name="WallpaperDirectories" ItemsSource="{Binding WallpaperDirectories}" AutoGenerateColumns="False">
+        <DataGrid x:Name="WallpaperDirectories" ItemsSource="{Binding WallpaperDirectories}" AutoGenerateColumns="False" SelectionUnit="FullRow" SelectionChanged="WallpaperDirectories_SelectionChanged">
             <DataGrid.Columns>
                 <DataGridTextColumn Header="Wallpaper"  Binding="{Binding Path=Wallpaper}" Width="*" />
             </DataGrid.Columns>
